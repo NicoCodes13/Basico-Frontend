@@ -9,26 +9,60 @@
 
 <style>
     body {
+        background-color: #AB88FF;
         margin: 0px;
     }
     
-    header {
-        background-color: #21C08B;
+    .header {
+        background-color: #AB88FF;
         /* Medida relativa en porcentaje del ancho*/
         width: 100%;
         height: 80px;
     }
     
-    header img {
+    .header__img {
         width: 200px;
         margin-top: 10px;
         margin-left: 10px;
     }
+    
+    .header__menu {
+        margin-right: 30px;
+    }
+    
+    .header__menu ul {
+        display: none;
+        list-style: none;
+        padding: 0px;
+        position: absolute;
+        width: 100px;
+        text-align: right;
+        margin: 0px 0px 0px -14px;
+    }
+    
+    .header__menu--profile {
+        margin-right: 8px;
+        width: 40px;
+    }
 </style>
 
 <body>
-    <header>
-        <img src="logo-platzi-video-BW2.png" alt="Logo">
+    <header class="header">
+        <img class="header__img" src="logo-platzi-video-BW2.png" alt="Logo">
+        <!-- contenedor de el menu -->
+        <div class="header__menu">
+            <!-- contenedor del perfil -->
+            <div class="header__menu--profile">
+                <img src="./icons8-perfil-de-gato-50.png" alt="User">
+                <p>perfil</p>
+            </div>
+            <!-- lista deplegable -->
+            <ul>
+                <!-- etiqueta a para usar un hypervinculo -->
+                <li><a href="/">Cuenta</a></li>
+                <li><a href="/">Cerrar Sesión</a></li>
+            </ul>
+        </div>
     </header>
 </body>
 
