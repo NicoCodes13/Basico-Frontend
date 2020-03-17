@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -11,6 +12,7 @@
     body {
         background-color: #AB88FF;
         margin: 0px;
+        font-family: 'Muli', sans-serif;
     }
     
     .header {
@@ -18,6 +20,9 @@
         /* Medida relativa en porcentaje del ancho*/
         width: 100%;
         height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .header__img {
@@ -39,10 +44,44 @@
         text-align: right;
         margin: 0px 0px 0px -14px;
     }
+    /* all hacer hober sobre el header menu afectara lo declare despues */
+    /* Usada para el hover que es una pseudo clase */
+    
+    .header__menu:hover ul,
+    ul:hover {
+        /* Muestra el bloque del menu ul  */
+        display: block;
+    }
+    
+    .header__menu li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .header__menu li {
+        /* Al declarar solo dos medidas la primera va a top y bottom y la otra para los laterales */
+        margin: 10px 0px;
+    }
+    
+    .header__menu li a:hover {
+        text-decoration: underline;
+    }
     
     .header__menu--profile {
         margin-right: 8px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .header__menu--profile img {
+        margin-right: 8px;
         width: 40px;
+        color: white;
+    }
+    
+    .header__menu--profile p {
+        margin: 0px;
+        color: white;
     }
 </style>
 
